@@ -4,12 +4,6 @@ This project presents a deep learning-based solution to detect epileptic seizure
 
 ## 🔍 Motivation
 
-Recurrent models like **LSTMs** and **GRUs** are commonly used for sequential data modeling, but their sequential nature hinders parallelization, making training and inference slower. On the other hand, **CNNs** can be highly parallelized (both in terms of input windows and kernels), but they have a limited memory of past inputs.
-
-**Temporal Convolutional Networks (TCNs)** address both these limitations by:
-- Offering **parallel computation** capabilities similar to CNNs.
-- Maintaining **long-range temporal dependencies** through dilated convolutions.
-
-This makes TCNs especially effective for time-series data like EEG. By fusing CNN and TCN features, our model achieves improved accuracy and efficiency in epileptic seizure detection.
+Traditional recurrent models like LSTMs and GRUs are effective for sequence modeling but suffer from sequential computation, making them slower and harder to parallelize. In contrast, CNNs offer efficient parallelization across input windows and kernel operations, but their limited receptive field constrains their ability to capture long-term dependencies. TCNs combine the strengths of both approaches—they provide large temporal memory through dilated convolutions and support full parallelization, making them well-suited for modeling EEG time-series data. This hybrid CNN-TCN architecture thus balances efficient computation and long-range temporal modeling for accurate seizure detection.
 
 ---
